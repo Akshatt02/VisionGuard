@@ -54,6 +54,10 @@ app.get('/', (req, res) => {
   res.send('VisionGuard API is running...');
 });
 
+app.head('/ping', (req, res) => {
+  res.status(200).end();
+});
+
 const PORT = process.env.PORT || 5000;
 
 server.listen(PORT, () => {
